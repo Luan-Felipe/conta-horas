@@ -1,13 +1,54 @@
-const inicio = new Date("2023-08-08T08:00:10");
 
-const fim = new Date("2022-08-08T14:00:00");
+document
+    .getElementById('registrar-entrada')
+    .addEventListener('click', function () {
+        window.localStorage.setItem('comecoDeExpediente', Date());
+        updateUI();
+    });
 
-const diferenca = new Date(fim - inicio);
+document
+    .getElementById('registrar-comeco-almoco')
+    .addEventListener('click', function () {
+        window.localStorage.setItem('comecoDeAlmoco', Date());
+        updateUI();
+    });
 
-let resultado = diferenca.getUTCHours() + "h ";
+document
+    .getElementById('registrar-fim-almoco')
+    .addEventListener('click', function () {
+        window.localStorage.setItem('fimDeAlmoco', Date());
+        updateUI();
+    });
 
-resultado += diferenca.getUTCMinutes() + "m ";
+document
+    .getElementById('registrar-saida')
+    .addEventListener('click', function () {
+        window.localStorage.setItem('fimDeExpediente', Date());
+        updateUI();
+    });
 
-resultado += diferenca.getUTCSeconds() + "s ";
+function updateUI() {
+    var values = [],
+        keys = Object.keys(localStorage),
+        i = keys.length;
+    while (i--) {
+        values.push(localStorage.getItem(keys[i]));
+    }
+    document.getElementById('horas-armazenadas').textContent = values;
+}
 
-console.log(resultado);
+function calcularHorasTrabalhadas() {
+    let comecoDeExpediente = localStorage.getItem('comecoDeExpediente');
+
+    let comecoDeAlmoco = localStorage.getItem('comecoDeAlmoco')
+
+    let fimDeAlmoco = localStorage.getItem('fimDeAlmoco');
+
+    let fimDeExpediente = localStorage.getItem('fimDeExpediente');
+
+    let diferenca2 = new Date(comecoDeAlmoco - comecoDeExpediente + fimDeExpediente - fimDeAlmoco);
+
+  
+    console.log(comecoDeExpediente);
+    console.log(`Hoje você trabalhou ${diferenca2}`);
+}

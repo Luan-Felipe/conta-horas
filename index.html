@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Horas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="botoes">
+            <button id="registrar-entrada">Registrar horário de entrada</button>
+            <button id="registrar-comeco-almoco">Registrar saída para almoço</button>
+            <button id="registrar-fim-almoco">Registrar volta do almoço</button>
+            <button id="registrar-saida">Registrar horário de saída</button>
+            <button onclick="calcularHorasTrabalhadas()">Calcular horas trabalhadas</button>
+        </div>
+        <div id="horas-armazenadas"></div>
+    </div>
+    <script src="contar.js"></script>
+</body>
+</html>
