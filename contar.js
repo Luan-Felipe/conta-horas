@@ -58,5 +58,6 @@ function calcularHorasTrabalhadas() {
         parse += primeiroHorario.getUTCMinutes() + segundoHorario.getUTCMinutes() + "M";
         parse += primeiroHorario.getUTCSeconds() + segundoHorario.getUTCSeconds() + "S";
     
-    console.log(`Hoje você trabalhou ${parse}`);
+    let mensagem = (`Hoje você trabalhou ${parse}`);
+    document.getElementById("horas-armazenadas").innerHTML = mensagem;
 }

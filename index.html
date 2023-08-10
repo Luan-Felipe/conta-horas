@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Horas</title>
-</head>
-<body>
-    <div class="container">
-        <div class="botoes">
-            <button id="registrar-entrada">Registrar horário de entrada</button>
-            <button id="registrar-comeco-almoco">Registrar saída para almoço</button>
-            <button id="registrar-fim-almoco">Registrar volta do almoço</button>
-            <button id="registrar-saida">Registrar horário de saída</button>
-            <button onclick="calcularHorasTrabalhadas()">Calcular horas trabalhadas</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Contador de Horas</title>
+    </head>
+    <body>
+        <header>
+            <h1>Contador de Horas Trabalhadas</h1>
+        </header>
+        <div class="main">
+            <div class="container">
+                <div class="botoes">
+                    <button id="registrar-entrada" class="botao">
+                        Registrar horário de entrada
+                    </button>
+                    <button id="registrar-comeco-almoco" class="botao">
+                        Registrar saída para almoço
+                    </button>
+                    <button id="registrar-fim-almoco" class="botao">
+                        Registrar volta do almoço
+                    </button>
+                    <button id="registrar-saida" class="botao">
+                        Registrar horário de saída
+                    </button>
+                    <button onclick="calcularHorasTrabalhadas()" class="botao">
+                        Calcular horas trabalhadas
+                    </button>
+                </div>
+                <div id="horas-armazenadas" class="horas-armazenadas">testando onde vai ficar esse texto</div>
+            </div>
         </div>
-        <div id="horas-armazenadas"></div>
-    </div>
-    <script src="contar.js"></script>
-</body>
+
+        <script src="contar.js"></script>
+    </body>
 </html>

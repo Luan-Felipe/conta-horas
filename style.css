@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    max-width: 1024px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.main {
+    width: 80%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.botoes {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+}
+
+.botao {
+    margin: 1rem auto;
+}
+
+.horas-armazenadas {
+    width: 15rem;
+    height: 2rem;
+    border: 1px solid #f51;
+    text-align: center;
+}
+
